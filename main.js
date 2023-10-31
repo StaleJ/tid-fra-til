@@ -12,7 +12,21 @@ function timeDifference(time1, time2) {
     const seconds = Math.floor((difference_ms % 60000) / 1000);
 
     // Format the result as "hh:mm:ss"
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    return tidFormat(hours, minutes, seconds);
+}
+
+function tidFormat(timer, minutter, sekunder) {
+    let melding = '';
+    if (timer > 0) {
+        melding += timer > 1 ? `${timer} timer ` : `${timer} time `;
+    }
+    if (minutter > 0) {
+        melding += minutter > 1 ? `${minutter} minutter ` : `${minutter} minutt `;
+    }
+    if (sekunder > 0) {
+        melding += sekunder > 1 ? `${sekunder} sekunder ` : `${sekunder} sekund `;
+    }
+    return `Du var på jobb i ${melding}`;
 }
 
 
@@ -24,7 +38,7 @@ document.getElementById("time-button").addEventListener("click", function () {
 
 
     const resultDiv = document.getElementById("result");
-    resultDiv.textContent = "Time difference: " + difference;
+    resultDiv.textContent = difference;
 
 
 });
