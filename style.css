@@ -27,6 +27,13 @@ body {
     flex-direction: column;
 }
 
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: var(--margin-top-space);
+}
+
 .button-from-to-time {
     margin-top: var(--margin-top-space);
 }
@@ -44,7 +51,9 @@ body {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    width: 230px;
+}
+.time-button {
+    margin-right: 1rem;
 }
 
 

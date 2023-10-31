@@ -25,7 +25,11 @@
     <div id="app">
       <sl-input class="from-time" id="from" type="time" value="07:00" label="Når kom du på jobb?"></sl-input>
       <sl-input class="to-time" id="to" type="time" value="15:00" label="Når gikk du fra jobb?"></sl-input>
-      <sl-button class="button-from-to-time" id="time-button">Regn ut</sl-button>
+      <div class="button-group">
+        <sl-button class="time-button" id="time-button">Regn ut</sl-button>
+        <sl-switch id="lunch-switch">Trekk fra lunsj</sl-switch>
+      </div>
+
     </div>
     <h3 class="from-to-result" id="result"></h3>
     <script type="module" src="/main.js"></script>

@@ -1,7 +1,11 @@
-function timeDifference(time1, time2) {
+function timeDifference(time1, time2, isChecked) {
     // Convert both times to milliseconds
     const time1_ms = new Date("1970-01-01T" + time1 + "Z").getTime();
-    const time2_ms = new Date("1970-01-01T" + time2 + "Z").getTime();
+    let time2_ms = new Date("1970-01-01T" + time2 + "Z").getTime();
+
+    if (isChecked) {
+        time2_ms -= 1_800_000;
+    }
 
     // Calculate the difference in milliseconds
     const difference_ms = Math.abs(time1_ms - time2_ms);
@@ -34,7 +38,8 @@ document.getElementById("time-button").addEventListener("click", function () {
 
     const fromTime = document.getElementById("from").value;
     const toTime = document.getElementById("to").value;
-    const difference = timeDifference(fromTime, toTime);
+    const lunchSwitch = document.getElementById("lunch-switch");
+    const difference = timeDifference(fromTime, toTime, lunchSwitch.checked);
 
 
     const resultDiv = document.getElementById("result");
