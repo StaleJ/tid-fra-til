@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+            rel="stylesheet"
+            media="(prefers-color-scheme:light)"
+            href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
+    />
+    <link
+            rel="stylesheet"
+            media="(prefers-color-scheme:dark)"
+            href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/dark.css"
+            onload="document.documentElement.classList.add('sl-theme-dark');"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tid fra Til</title>
+  </head>
+  <body>
+    <div id="app">
+      <sl-input class="from-time" id="from" type="time" value="07:00" label="Når kom du på jobb?"></sl-input>
+      <sl-input class="to-time" id="to" type="time" value="15:00" label="Når gikk du fra jobb?"></sl-input>
+      <sl-button class="button-from-to-time" id="time-button">Button</sl-button>
+      <h3 class="from-to-result" id="result"></h3>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+  </body>
+</html>
