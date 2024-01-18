@@ -30,7 +30,8 @@ function tidFormat(timer, minutter, sekunder) {
     if (sekunder > 0) {
         melding += sekunder > 1 ? `${sekunder} sekunder ` : `${sekunder} sekund `;
     }
-    return `Du var på jobb i ${melding}`;
+    const minuteTilTime = timer + (minutter / 60)
+    return `Du var på jobb i ${melding} eller i UBW tid ${minuteTilTime.toFixed(2)}`;
 }
 
 
